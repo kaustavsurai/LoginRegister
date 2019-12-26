@@ -1,0 +1,7 @@
+---
+applications:
+- name: LoginRegister
+  memory: 800m
+  path: target/Login-0.0.1-SNAPSHOT.war
+  services:
+    -mysql
