@@ -1,5 +1,7 @@
-name: LoginRegister
-path: target/Login-1.0-SNAPSHOT.war
-memory: 1G
-services:
-  - "mysql"
+---
+applications:
+  - name: LoginRegister
+    path: target/Login-1.0-SNAPSHOT.war
+    memory: 1G
+    services:
+      - mysql
