@@ -17,6 +17,7 @@ public class LoginController {
 
     @GetMapping("/login/all")
     private List<Login> getAllUsers(){
+
         return loginService.getUsers();
     }
 

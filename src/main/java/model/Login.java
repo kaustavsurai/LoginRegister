@@ -1,10 +1,6 @@
 package model;
 
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
-
 import javax.persistence.*;
-@Component
 @Entity
 @Table(name = "login")
 public class Login {
@@ -19,8 +15,13 @@ public class Login {
     @Column(name = "session_id")
     private String sessionId;
 
+    public Login(){}
 
-
+    public Login(String email,String password,String sessionId){
+        setEmail(email);
+        setPassword(password);
+        setSessionId(sessionId);
+    }
 
     public String getSessionId() {
         return sessionId;
