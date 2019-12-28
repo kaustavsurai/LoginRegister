@@ -2,6 +2,7 @@ package controller;
 
 import model.Login;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,6 +12,7 @@ import repository.LoginRepository;
 import java.util.List;
 
 @RestController
+@Service
 public class LoginController {
     @Autowired
     private LoginRepository loginRepository;

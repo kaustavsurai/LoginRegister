@@ -4,7 +4,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.*;
-@Service
 @Component
 @Entity
 @Table(name = "login")
