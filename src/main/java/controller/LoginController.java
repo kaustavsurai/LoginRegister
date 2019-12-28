@@ -2,29 +2,27 @@ package controller;
 
 import model.Login;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import repository.LoginRepository;
+import service.LoginService;
 
 import java.util.List;
 
 @RestController
-@Service
 public class LoginController {
     @Autowired
-    private LoginRepository loginRepository;
+    private LoginService loginService;
 
     @GetMapping("/login/all")
     private List<Login> getAllUsers(){
-        return loginRepository.findAll();
+        return loginService.getUsers();
     }
 
     @PostMapping("/login/new")
     public List<Login> setAllUsers(@RequestBody final Login login){
-        loginRepository.save(login);
-        return loginRepository.findAll();
+        loginService.setUsers(login);
+        return loginService.getUsers();
     }
 }
